@@ -1,0 +1,14 @@
+language: python
+python: 3.7
+
+before_install:
+- pip install -U pip
+- pip install -U pytest
+- pip install -U pytest_cov
+- pip install -U pylint
+
+script:
+- pytest
+- pytest --cov ./
+- pylint ./tweet.py
+- pylint ./tweet_test.py
